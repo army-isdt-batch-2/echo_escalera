@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Events\NewMessageSent;
 
 class ChatController extends Controller
 {
@@ -20,7 +21,9 @@ class ChatController extends Controller
     }
     public function send()
     {
-        dd($this->request->all());
+        event(new NewMessageSent($this->request->message));
+
+        return back();
     }
 }
  

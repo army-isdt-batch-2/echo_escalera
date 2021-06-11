@@ -24,7 +24,7 @@ class NewMessageSent
      */
     public function __construct($message)
     {
-        $this->message = $message
+        $this->message = $message;
         //
     }
 
@@ -37,15 +37,15 @@ class NewMessageSent
     {
         return new Channel('messages');
     }
-    public function broadcastWith();
+    public function broadcastWith()
     {
         return [
             'message' =>$this->message
         ];
     }
-    public function broadcastAs();
+    public function broadcastAs()
     {
-        return 'newmessage'
+        return 'newmessage';
     }
 
 
