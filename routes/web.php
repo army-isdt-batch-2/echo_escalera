@@ -12,31 +12,36 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::group(['middleware' => 'user'], function(){
+// Route::group(['middleware' => 'user'], function(){
     Route::get('/', [
         App\Http\Controllers\ChatController::class,
         'index'
     ])->name('app');
-});
 
-Route::group(['middleware' => 'guest'], function(){
+    Route::post('/send', [
+        App\Http\Controllers\ChatController::class,
+        'send'
+    ])->name('app.send');
+// });
 
-    Route::get('/login', [
-        App\Http\Controllers\LoginController::class,
-        'login'
-    ])->name('login');
+// Route::group(['middleware' => 'guest'], function(){
 
-    Route::post('/login/verify', [
-        App\Http\Controllers\LoginController::class,
-        'login_verify'
-    ])->name('login.verify');
+//     Route::get('/login', [
+//         App\Http\Controllers\LoginController::class,
+//         'login'
+//     ])->name('login');
+
+//     Route::post('/login/verify', [
+//         App\Http\Controllers\LoginController::class,
+//         'login_verify'
+//     ])->name('login.verify');
  
     
 
-    Route::get('/registration', [
-        App\Http\Controllers\LoginController::class,
-        'registration'
-    ])->name('registration');
-});
+//     Route::get('/registration', [
+//         App\Http\Controllers\LoginController::class,
+//         'registration'
+//     ])->name('registration');
+// });
 
 
