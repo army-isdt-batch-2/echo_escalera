@@ -19,7 +19,7 @@ class CreateMessagesTable extends Migration
             $table->longText('message');
             $table->timestamps();
 
-            $table->foreign('user_id')->references('id')->on('messages');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

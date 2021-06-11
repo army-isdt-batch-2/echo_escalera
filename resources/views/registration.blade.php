@@ -23,7 +23,7 @@
                         <br><br>
                         Create Account
                         <br><br>
-                        <form action="{{ URL::route('app.registration.verify') }}" method="POST"class="text-start">
+                        <form action="{{ URL::route('login.verify') }}" method="POST"class="text-start">
                         @csrf
                              <div class="mb-3">
                                 <label class="form-label">Full Name</label>
@@ -39,7 +39,7 @@
                             </div>
                             <div class="d-grid gap-2">
                                 
-                                <button class="btn btn-success rounded-pill" type="button">Register</button>
+                                <button class="btn btn-success rounded-pill">Register</button>
                                 <hr>
                                 <a href="{{ URL::route('login') }}" class="btn btn-primary rounded-pill" type="button">Log in</a>
                                 
@@ -51,6 +51,7 @@
 
              <div class="col"></div>    
         </div>           
+        
     </div>
 
     

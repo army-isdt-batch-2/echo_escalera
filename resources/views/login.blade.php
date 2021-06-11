@@ -23,7 +23,7 @@
                         <br><br>
                         Log In to your Account
                         <br><br>
-                        <form action="{{ URL::route('app.login.verify') }}" method="POST" class="text-start">
+                        <form action="" method="POST" class="text-start">
                         @csrf
                             <div class="mb-3">
                                 <label class="form-label">username</label>
